@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { SignedIn, SignedOut, RedirectToSignIn } from '@clerk/clerk-react';
 import Home from './pages/Home'
 import Result from './pages/Result'
 import BuyCredit from './pages/BuyCredit'

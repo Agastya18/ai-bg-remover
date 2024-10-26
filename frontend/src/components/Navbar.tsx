@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import { useClerk,UserButton,useUser} from '@clerk/clerk-react'
 const Navbar = () => {
   const {openSignIn} = useClerk()
-  const {isSignedIn,user}=useUser()
+  const {isSignedIn}=useUser()
   return (
-    <div className=' flex items-center justify-between py-3 mx-4'>
+    <div className=' flex items-center justify-between py-3 mx-4 lg:px-44'>
        <Link to={'/'}>
        <img className=' w-32  sm:w-44' src={assets.logo} alt="" /></Link>
        {
