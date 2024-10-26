@@ -5,6 +5,7 @@ import BuyCredit from './pages/BuyCredit'
 import './App.css'
 import { Route,Routes } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 function App() {
 
 
@@ -17,6 +18,7 @@ function App() {
       <Route path="/buy" element={<BuyCredit />} />
 
    </Routes>
+   <Footer/>
    </div>
   )
 }
