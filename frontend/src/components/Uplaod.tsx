@@ -1,11 +1,14 @@
 // Date: 03/20/2021
+import { useContext } from "react"
 import { assets } from "../assets/assets"
+import { AppContext } from "../context/AppContext"
 const Uplaod = () => {
+  const {removeBg}=useContext(AppContext)
   return (
     <div className=" pb-16">
       <h1 className=" text-center text-2xl md:text-3xl lg:text-4xl mt-4 font-semibold bg-gradient-to-r from-slate-600 to-gray-500  bg-clip-text text-transparent py-6 md:py-16">See the magic. try now</h1>
       <div className=" text-center mb-24">
-           <input type="file" id="upload1" hidden />
+           <input onChange={e=>{ if (e.target.files) removeBg(e.target.files[0]) }} type="file" id="upload1" hidden accept="image/*" />
            <label className=" inline-flex gap-3 px-8 py-3.5 rounded-full  cursor-pointer bg-gradient-to-r from-violet-600  to-fuchsia-500 m-auto hover:scale-105  transition-all duration-700" htmlFor="upload1">
              <img width={20} src={assets.upload_btn_icon} alt="uplaod" />
              <p className=" text-white text-sm">Uplaod your image</p>
